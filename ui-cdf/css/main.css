@@ -1,0 +1,32 @@
+@import url(../fonts/fonts.css);
+
+:root{
+  --white:#FFFFFF;
+  --red: #f63825;
+  --red-medium: #F93822;
+
+  /* fonts */
+  --ultra-light: 'SF UI Display Ultralight';
+  --thin: 'SF UI Display Thin';
+  --light : 'SF UI Display Light';
+  --medium  :'SF UI Display Medium';
+  --semibold: 'SF UI Display Semibold';
+  --bold : 'SF UI Display Bold';
+  --heavy:'SF UI Display Heavy';
+  --black: 'SF UI Display Black';
+}
+*{
+  margin: 0;
+  padding: 0; 
+}
+
+html, body{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'SF UI Display Medium';
+
+  box-sizing: border-box;
+
+  font-size: 15px;
+}
+
