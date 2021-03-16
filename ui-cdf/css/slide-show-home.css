@@ -1,6 +1,13 @@
 /* @import url(./main.css); */
 @import url(./animation.css);
 
+.slide-show{
+  width: inherit;
+  width: inherit;
+
+  position: relative;
+}
+
 .gallery-wrapper{
   width: inherit;
   height: inherit;
@@ -10,6 +17,8 @@
 }
 
 .gallery-wrapper .title-main{
+  width: auto;
+  height: 200px;
   font-family: var(--black);
 
   font-size: 7.2rem;
@@ -18,7 +27,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 1.8rem;
+  bottom: 0;
+  top: -5rem;
 
   margin-left: auto;
   margin-right: auto;
@@ -26,11 +36,11 @@
   color:var(--white);
   text-align: center;
 
-  transition: top 1s;
+  transform: translateY(5rem);
 
-  animation-name: fade-down;
-  animation-duration: 2s;
-  
+  transition: transform 1s ease;
+
+  z-index: 99;
 }
 
 .gallery-wrapper .title-main p{
@@ -41,18 +51,28 @@
 .gallery-wrapper .hightlight{
   width: 100%;
   height: 100vh;
-  background-image: url('../img/01.jpg');
 
-  background-position: center;
+  background-image: url('../img/01.jpg');
+  background-position: center ;
   background-size: cover;
   background-repeat: no-repeat;
   
+  position: relative;
 
-  transition: all 2s ease-in-out;
+  /* transition: background 3s ease;   */
+
+  transition: background 5s;
+
+  animation-name: transition;
+  animation-duration: 5s;
+  /* animation-iteration-count: infinite; */
+  animation-timing-function: ease-in;
   
 }
 
 .gallery-wrapper .hightlight span{
+  width: auto;
+  height: 50px;
 
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -62,7 +82,7 @@
   text-align: center;
 
   position: absolute;
-  top: 30%;
+  top: 33%;
   left: 0;
   right: 0;
   bottom: 0;
@@ -75,12 +95,12 @@
   position: absolute;
 
   bottom: 100px;
-  left: 20px;
+  left: -250px;
   color: var(--white);
 
+  transform: translateX(270px);
   transition: all 2s;
-  animation-name: fade-left;
-  animation-duration: 2s;
+  
 }
 
 .institutional h3{
@@ -101,6 +121,8 @@
     justify-content: center;
     align-items: center;
 
+    outline: none;
+
     padding: 5px;
     color: var(--white);
 
@@ -108,11 +130,17 @@
     font-size: 1.1rem;
 
     border: none;
-    background-color: var(--red-medium);
+    background-color: var(--red);
+
+    transition: background-color 1s;
 
     text-transform: uppercase;
 
     cursor: pointer;
+}
+
+.institutional-button:hover{
+  background-color: var(--red-medium);
 }
 
 .institutional-button span{
@@ -131,7 +159,7 @@
   position: absolute;
 
   right: 15px;
-  bottom: 10%;
+  bottom: 5%;
 
   display: flex;
   flex-direction: column-reverse;
@@ -144,23 +172,29 @@
   z-index: 9999;
 }
 
-.contact-phone img:first-child{
+.contact-phone:hover a:nth-child(2), .contact-phone:hover a:nth-child(3){
   width: 20px;
   height: 20px;
 
-  margin: 5px auto 0;
-  padding: 12px;
+  padding: 10px;
+}
 
+.contact-phone a:first-child{
+  width: 20px;
+  height: 20px;
+
+  text-align: center;
+
+  margin: 5px auto 0;
+  padding: 15px;
 
   border-radius: 50%;
 
   background: var(--red);
-
-  /* background-color: #fff; */
  
 }
 
-.contact-phone img:nth-child(2), .contact-phone img:nth-child(3){
+.contact-phone a:nth-child(2), .contact-phone a:nth-child(3){
   width: 0px;
   height: 0px;
 
@@ -173,25 +207,9 @@
  
 }
 
-/* .contact-phone img:nth-child(3){
-  width: 15px;
-  height: 15px;
-
-  display: none;
-
-  padding: 8px;
-} */
-
-.contact-phone img.hover:hover ~ img{
-  width: 15px;
-  height: 15px;
-
-  padding: 10px;
-}
-
 .button-home{
   width: 100vw;
-  height: 2.8rem;
+  height: 3rem;
 
   display: flex;
   flex-direction: column;
@@ -214,17 +232,18 @@
   background-color: #1b1e21;
 }
 
-.button-home::after{
-  content: url(../assets/down-arrow.svg);
-
+.button-home::after{ 
   display: block;
 
   width: 20px;
   height: 20px;
 
+  content: url(../assets/arrowDown.png);
+
   animation-name: pulse;
   animation-iteration-count: infinite;
   animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
 
 .modal-wrapper{
@@ -277,4 +296,17 @@
   height: 40vh;
 
   
+}
+
+@media screen and (min-width: 1024px){
+  :root{
+    font-size: 16px;
+  }
+  .gallery-wrapper .hightlight span{
+    text-align: end;
+    top: 80%;
+    right: 60px;
+
+    font-size: 1.6rem;
+  }
 }

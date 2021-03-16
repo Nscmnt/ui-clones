@@ -3,7 +3,7 @@
 :root{
   --white:#FFFFFF;
   --red: #f63825;
-  --red-medium: #F93822;
+  --red-medium: #fc4935;
 
   /* fonts */
   --ultra-light: 'SF UI Display Ultralight';
@@ -26,6 +26,7 @@ html, body{
   font-family: 'SF UI Display Medium';
 
   box-sizing: border-box;
+  overflow-x: hidden;
 
   font-size: 15px;
 }

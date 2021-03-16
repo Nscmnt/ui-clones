@@ -5,12 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CDF.</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/home-header.css">
+  <link rel="stylesheet" href="css/slide-show-home.css">
+  <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
+<div id="home" class="slide-show">
   <div class="gallery-wrapper">
     <h1 class="title-main">CDF.  <p>Resolve e Ponto</p>
     </h1>      
@@ -27,13 +30,7 @@
     </button>
   </div>
 
-  <div class="contact-phone">
-      <img src="./assets/headphones.svg" alt="entre em contato" title="Entre em contato" class="hover">
-
-      <img src="assets/videoconferencia.svg" alt="videoconferência" title="Videoconferência">
-
-      <img src="assets/whatsapp.svg" alt="whatsapp" title="Chama no WhatsApp">
-  </div>
+  
 
   <a class="button-home">   
       Saiba Mais.   
@@ -45,8 +42,53 @@
     <div class="iframe">
       <iframe src="https://player.vimeo.com/video/423704462" frameborder="0" allow="autoplay;"></iframe>
     </div>
+
   </div>
+</div>
+
+<div class="contact-phone">
+  <a href=""><img src="./assets/headphones.svg" alt="entre em contato" title="Entre em contato"></a>
   
-  <script src="./js/galerry.js"></script>
+  <a href="https://videoconferencia.cdf.net/" target="_blank"><img src="assets/videoconferencia.svg" alt="videoconferência" title="Videoconferência"></a>
+  
+  <a href="https://api.whatsapp.com/send?phone=551130393057&text=CDF%3A%20envie%20essa%20msg%20p%2F%20falar%20com%20um%20especialista" target="_blank"><img src="assets/whatsapp.svg" alt="whatsapp" title="Chama no WhatsApp"></a>
+  
+</div>
+
+  <header id="header">
+      <div class="header-menu-mobile">
+
+      <div class="menu-burguer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <div class="logo">
+        <img src="img/logo-white.svg" alt="logo da CDF">
+      </div>
+
+      </div>    
+    
+      <div class="wrapper-menu"></div>
+
+      <nav class="nav-menu">
+        <ul class="menu">
+          <li><a href="#home">Inicio.</a></li>
+          <li><a href="#home">Quem Somos.</a></li>
+          <li><a href="#home">O que fazemos.</a></li>
+          <li><a href="#home">Parceiros.</a></li>
+          <li><a href="#home">Contato.</a></li>
+          
+          <li class="pipe"></li>
+          <li class="button">Compre Aqui</li>
+        </ul>
+      </nav>
+         
+    
+  </header>
+  
+  <script src="./js/slideShow-home.js"></script>
+  <script src="./js/header.js"></script>
 </body>
 </html>
