@@ -89,8 +89,8 @@
   display: none;
   position: fixed;
   top: 0;
-  left: -300px; 
-  left: initial;
+  left: 0; 
+  
 
   background: var(--red);
 
@@ -237,6 +237,10 @@
 
     padding: 0;
     margin-right: 30px;
+  }
+
+  #header .nav-menu .menu li:nth-child(7){
+    display: none;
   }
 }
 

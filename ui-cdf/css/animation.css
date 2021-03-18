@@ -13,18 +13,93 @@
 
 @keyframes transition{
   0%{
-    opacity: 0.01;
-  }
-  25%{
-    opacity: 0.1;
-  }
-  50%{
-    opacity: 0.4;
-  }
-  75%{
-    opacity: 0.7;
-  }
-  100%{
     opacity: 1;
   }
+  100%{
+    opacity: 0;
+  }
 }
+
+@keyframes animation-menu-on{
+  0%{
+    transform: translateX(-300px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-menu-off{
+  100%{
+    transform: translateX(-300px);
+  }
+}
+
+@keyframes fade-up{
+  0%{ 
+    transform: translateY(70px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-down{
+  0%{
+    transform: translateY(-200px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-right{
+  0%{ 
+    transform: translateX(-200px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-left{
+  0%{ 
+    transform: translateX(101%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.animation-menu-on{
+  animation: animation-menu-on 1.2s ease;
+}
+
+.animation-menu-off{
+  animation: animation-menu-off 1.2s ease forwards;
+}
+
+.up{
+  animation-name: fade-up;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+[fade-down]{
+  animation-name: fade-down;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+[fade-right]{ 
+  animation-name: fade-right;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+[fade-left]{
+  animation-name: fade-left;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
