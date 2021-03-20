@@ -1,13 +1,25 @@
-#about .container{
-  width: 90vw;
+#about{
+  width: 100vw;
+  /* max-width: 1400px; */
   height: 100vh;
-  margin: 0 auto;
-  padding-top: 4rem;
-  padding: 4rem 30px 0;
-  overflow-x: visible;
-  background-color: #fff;
-
+  display: flex;
+  align-items: center;
+}
+#about .container{
   width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  
+  padding: 4rem 30px;
+
+  overflow-x: hidden;
+
+  background-color: #fff;
   background-position: center 70%;
   background-repeat: no-repeat;
   position: relative;
@@ -17,11 +29,17 @@
 #about .container h2.title{
   font-size: 2.7rem;
 
-  margin: 20px 10px;
+  margin: 50px 10px 0px 55px;
+
   padding-bottom: 28px;
+
   text-transform: uppercase;
 
+  align-self: flex-start;
+  visibility: hidden;
+
   position: relative;
+
   color: #1b1e21;
   font-family: var(--black);
 }
@@ -38,3 +56,348 @@
   left: 0;
   background-color: var(--red);
 }
+
+.timeline-wrapper{
+  width: 90vw;
+  height: 85vh;
+
+  margin-top: 30px;
+  position: relative;
+
+  overflow: hidden;
+  /* transform: scale(1.5); */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+}
+
+.timeline-wrapper::before{
+  content: "";
+  display: block;
+
+  height: 100%;
+  width: 15%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  
+  background: linear-gradient(to right, white, rgba(255,255,255, .8), rgba(255,255,255, .5),rgba(255,255,255, .0));
+
+  /* background-color: tomato;  */
+
+   z-index: 10;
+}
+
+.timeline-wrapper::after{
+  content: "";
+  display: block;
+
+  height: 100%;
+  width: 15%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+ 
+
+  background: linear-gradient(to left, white, rgba(255,255,255, .8), rgba(255,255,255, .5),rgba(255,255,255, .2), rgba(255,255,255, .01) );
+
+  /* background-color: tomato; */
+
+  z-index: 10;
+}
+
+.timeline-bars{
+  width: 90vw;
+  height: 100vh;
+  overflow-x: scroll;
+  /* overflow-y: hidden; */
+  
+}
+.bars-draggable.scroll{
+  transform: translateX(-2000px);
+}
+.bars-draggable{
+  width: max-content;
+  height: 800px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: grab;
+
+  position: relative;
+  transform: scale(1.5);
+
+  transition: transform 25s ease-in-out;
+
+  transform: translateX(0);
+
+  background-color: #fff;
+}
+
+.timeline-bars::-webkit-scrollbar{
+  display: none;
+}
+
+.bars-draggable .bar, .bars-draggable  .odd .bar{
+  width: 232px;
+  height: 32px;
+
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+
+  position: relative;
+
+  /* transform: scale(1.5); */
+  background-image: url(../img/bar.svg);
+  margin-right: 10px;
+
+  z-index: 9;
+}
+
+
+
+.bars-draggable  .bar::after{
+  content: "";
+
+  background-image: url(../assets/points.png);
+  background-repeat: repeat;
+  background-position: 50%;
+  background-size: contain;
+
+  position: absolute;
+
+  width: 10px;
+  height: 150px;
+
+  overflow: hidden;
+
+  top: -170px;
+  left: 105px;
+
+}
+
+.bars-draggable  .odd .bar::after{
+  content: "";
+
+  background-image: url(../assets/points.png);
+  background-repeat: repeat;
+  background-position: 50%;
+  background-size: contain;
+
+  position: absolute;
+
+  width: 10px;
+  height: 60px;
+
+  overflow: hidden;
+
+  top: 40px;
+  left: 105px;
+}
+
+
+.timeline-detais-wrapper{
+  display: flex;
+  justify-content: space-around;
+  align-self: flex-start;
+
+  width: 300px;
+  height: 200px;
+
+  position: absolute;
+  top: 120px;
+  left: 80px;
+}
+
+.timeline-detais-wrapper img{
+  width: 80px;
+  height: 80px;
+
+  margin: 10px;
+}
+
+.timeline-detais-wrapper .timeline-years-detais{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start ;
+
+  
+}
+
+.timeline-detais-wrapper .timeline-years-detais h3{
+  font-size: 2rem;
+
+  font-weight: bold;
+  font-family: var(--black);
+
+  padding: 5px 0;
+
+  position: relative;
+}
+
+.timeline-detais-wrapper .timeline-years-detais h3::after{
+  content: "";
+  display: block;
+
+  height: 3px;
+  width: 25px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  background-color: var(--red);
+
+}
+
+.timeline-detais-wrapper .timeline-years-detais p{
+  font-size: 1rem;
+  line-height: 23px;
+
+  font-size: 1rem;
+  font-weight: normal;
+
+  margin-bottom: 5px;
+}
+
+.timeline-detais-wrapper:nth-child(2){
+
+  flex-direction: row-reverse;
+  top: 510px;
+  left: 130px;
+}
+
+.timeline-detais-wrapper:nth-child(3){
+  width: 450px;
+  top: 120px;
+  left: 550px;
+}
+
+.timeline-detais-wrapper:nth-child(4){
+
+  flex-direction: row-reverse;
+  top: 510px;
+  left: 600px;
+}
+
+.timeline-detais-wrapper:nth-child(5){
+  top: 120px;
+  left: 1050px;
+}
+
+.timeline-detais-wrapper:nth-child(6){
+  flex-direction: row-reverse;
+
+  top: 510px;
+  left: 1100px;
+}
+
+.timeline-detais-wrapper:nth-child(7){
+  top: 120px;
+  left: 1540px;
+}
+
+.timeline-detais-wrapper:nth-child(8){
+  flex-direction: row-reverse;
+  width: 230px;
+  top: 510px;
+  left: 1640px;
+}
+
+.timeline-detais-wrapper:nth-child(9){
+  top: 120px;
+  left: 1980px;
+}
+
+.timeline-detais-wrapper:nth-child(9) img{
+  width: 100px;
+  height: 50px;
+}
+
+.timeline-detais-wrapper:nth-child(10){
+  flex-direction: row-reverse;
+
+  width: 230px;
+  top: 510px;
+  left: 2145px;
+}
+
+.timeline-bars .button-left{
+  width: 50px;
+  height: 50px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background-color: var(--red);
+
+  background-image: url(../img/icon-left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  position: absolute;
+  top: 53%;
+  left: 50px;
+
+  outline: none;
+  cursor: pointer;
+
+  z-index: 11;
+}
+
+.timeline-bars .button-right{
+  width: 50px;
+  height: 50px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background-color: var(--red);
+
+  background-image: url(../img/icon-right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  position: absolute;
+  top: 53%;
+  right: 50px;
+  outline: none;
+  cursor: pointer;
+
+  z-index: 11;
+}
+
+@media screen and (min-width: 960px){
+  .bars-draggable.scroll{
+    transform: translateX(-1600px);
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .bars-draggable.scroll{
+    transform: translateX(-1400px);
+  }
+}
+
+@media screen and (min-width: 1400px){
+  .bars-draggable.scroll{
+    transform: translateX(-1100px);
+  }
+}
+

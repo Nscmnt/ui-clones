@@ -37,16 +37,17 @@
 
 @keyframes fade-up{
   0%{ 
-    transform: translateY(70px);
+    transform: translateY(50px);
   }
   100%{
     transform: translateY(0);
+    visibility: visible;
   }
 }
 
 @keyframes fade-down{
   0%{
-    transform: translateY(-200px);
+    transform: translateY(-100px);
   }
   100%{
     transform: translateY(0);
@@ -55,16 +56,16 @@
 
 @keyframes fade-right{
   0%{ 
-    transform: translateX(-200px);
+    transform: translateX(-100px);
   }
   100%{
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
 @keyframes fade-left{
   0%{ 
-    transform: translateX(101%);
+    transform: translateX(110%);
   }
   100%{
     transform: translateY(0);
@@ -80,24 +81,22 @@
 }
 
 .up{
-  animation-name: fade-up;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
+  animation: fade-up 1s ease-in-out forwards;
 }
 
-[fade-down]{
+.down{
   animation-name: fade-down;
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
 }
 
-[fade-right]{ 
+.right{
   animation-name: fade-right;
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
 }
 
-[fade-left]{
+.left{
   animation-name: fade-left;
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;

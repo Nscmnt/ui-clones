@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script defer src="./js/animations.js"></script>
     <script defer src="./js/slideShow-home.js"></script>
     <script defer src="./js/header.js"></script>
     <script defer src="./js/about.js"></script>
 
     <title>CDF.</title>
-    
+
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="css/animation.css" />
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="css/slide-show-home.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/our-work.css" />
   </head>
   <body>
     <div id="home" class="slide-show">
@@ -72,7 +74,8 @@
 
       <div class="modal-wrapper" modal-wrapper>
         <a href="#" class="button-close" close-modal
-          ><img src="./img/close.svg" alt="fechar"/></a>
+          ><img src="./img/close.svg" alt="fechar"
+        /></a>
 
         <div class="iframe">
           <iframe
@@ -85,29 +88,29 @@
       </div>
     </div>
 
-    <div class="contact-phone">
-    <a href=""
-      ><img
-        src="./assets/headphones.svg"
-        alt="entre em contato"
-        title="Entre em contato"
-    /></a>
+    <div class="contact-phone" fade-left>
+      <a href=""
+        ><img
+          src="./assets/headphones.svg"
+          alt="entre em contato"
+          title="Entre em contato"
+      /></a>
 
-    <a href="https://videoconferencia.cdf.net/" target="_blank"
-      ><img
-        src="assets/videoconferencia.svg"
-        alt="videoconferência"
-        title="Videoconferência"
-    /></a>
+      <a href="https://videoconferencia.cdf.net/" target="_blank"
+        ><img
+          src="assets/videoconferencia.svg"
+          alt="videoconferência"
+          title="Videoconferência"
+      /></a>
 
-    <a
-      href="https://api.whatsapp.com/send?phone=551130393057&text=CDF%3A%20envie%20essa%20msg%20p%2F%20falar%20com%20um%20especialista"
-      target="_blank"
-      ><img
-        src="assets/whatsapp.svg"
-        alt="whatsapp"
-        title="Chama no WhatsApp"
-    /></a>
+      <a
+        href="https://api.whatsapp.com/send?phone=551130393057&text=CDF%3A%20envie%20essa%20msg%20p%2F%20falar%20com%20um%20especialista"
+        target="_blank"
+        ><img
+          src="assets/whatsapp.svg"
+          alt="whatsapp"
+          title="Chama no WhatsApp"
+      /></a>
     </div>
 
     <header id="header">
@@ -125,12 +128,10 @@
 
       <div class="wrapper-menu"></div>
 
-      
-
       <nav class="nav-menu">
         <ul class="menu">
           <li><a href="#home">Inicio.</a></li>
-          <li><a href="#home">Quem Somos.</a></li>
+          <li><a href="#about">Nossa História.</a></li>
           <li><a href="#home">O que fazemos.</a></li>
           <li><a href="#home">Parceiros.</a></li>
           <li><a href="#home">Contato.</a></li>
@@ -146,13 +147,260 @@
         <h2 class="title" fade-up>Nossa história.</h2>
 
         <div class="timeline-wrapper">
+          <div class="timeline-bars">
+            <div class="bars-draggable" draggable="true">
+              <div class="timeline-detais-wrapper">
+                <img src="./img/ico-2010.5cf949ac.svg" alt="" />
 
+                <div class="timeline-years-detais">
+                  <h3>2010</h3>
+                  <p>
+                    Novo canal de distribuição <br />
+                    Varejos nacionais <br />
+                    Inicio do programa Educa CDF
+                  </p>
+
+                  <img src="./assets/Educa CDF..svg" alt="logo cdf" />
+                </div>
+              </div>
+
+              <div class="timeline-detais-wrapper">
+                <img src="./assets/Imagem ilustrativa..svg" alt="" />
+
+                <div class="timeline-years-detais">
+                  <h3>2007</h3>
+                  <p>
+                    .Fundação CDF <br />
+                    .Lançamento do Suporte <br />
+                    Tecnológico Premium remoto .Inicio da distribuição: <br />
+                    Canal Seguradoras
+                  </p>
+
+                  <img
+                    src="./assets/Central de funcionamento.svg"
+                    alt="logo cdf"
+                  />
+                </div>
+              </div>
+
+              <div class="timeline-detais-wrapper">
+                <img src="./img/ico-2012.38b728e9.svg" alt="" />
+
+                <div class="timeline-years-detais">
+                  <h3>2012</h3>
+                  <p>
+                    Novo canal de distribuição <br />
+                    Operadora de telecomunicações <br />
+                    .Ampliação do portifólio de serviço: <br />
+
+                    Instalação de equipamentos de áudio e vídeo e serviços de
+                    Suporte Tecnológico Presenciais.
+                  </p>
+
+                  <!-- <img src="./assets/Educa CDF..svg" alt="logo cdf"> -->
+                </div>
+              </div>
+
+              <div class="timeline-detais-wrapper">
+                <img src="./img/ico-2014.abcc44e7.svg" alt="" />
+
+                <div class="timeline-years-detais">
+                  <h3>2014</h3>
+                  <p>
+                    Ampliação do portifólio de Serviços: <br />
+                    Implantação de equipamentos de linha branca <br />
+                    Espansão Varejos <br />
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-detais-wrapper">
+                <img src="./img/ico-2015.2a0680f7.svg" alt="" />
+
+                <div class="timeline-years-detais">
+                  <h3>2015</h3>
+                  <p>
+                    Ampliação do portifólio de Serviços: <br />
+                    Assistência residencial e Proteção Digital <br />
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-detais-wrapper">
+                <img src="./img/ico-2015.2a0680f7.svg" alt="" />
+
+                <div class="timeline-years-detais">
+                  <h3>2017</h3>
+                  <p>
+                    .Aquisição da TecTotal<br />
+                    .Reposicionamento Marca CDF <br />
+                    .Ampliação do portifólio de Serviços:<br />
+                    Impermeabilização de Estofafos e Colchões
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-detais-wrapper">
+                <img src="./img/ico-2018.75be51eb.svg" alt="" />
+
+                <div class="timeline-years-detais">
+                  <h3>2018</h3>
+                  <p>
+                    I.Ampliação do portifólio de Serviços. <br />
+                    nstalação Ar Condicionado e Casa Conectada<br />
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-detais-wrapper">
+                <img src="./img/ico-2019.6f703f73.svg" alt="" />
+
+                <div class="timeline-years-detais">
+                  <h3>2019</h3>
+                  <p>
+                    .Ampliação do portifólio de Serviços<br />
+                    Montagem de Pneus e Assistência Auto e Moto<br />
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-detais-wrapper">
+                <img src="./img/ico-2017.23c1208a.svg" alt="" />
+
+                <div class="timeline-years-detais">
+                  <h3>2020</h3>
+                  <p>
+                    .Aquisição AXA<br />
+                    Assistance do Brasil<br />
+                  </p>
+
+                  <img src="./img/Imagem" alt="logo AXA" />
+                </div>
+              </div>
+
+              <div class="timeline-detais-wrapper">
+                <img src="./img/ico-2020_2.b65dcab2.svg" alt="" />
+
+                <div class="timeline-years-detais">
+                  <h3>2020</h3>
+                  <p>
+                    Premiação Ouro<br />
+                    Cliente SA<br />
+                    Lider em projetos de Integração
+                  </p>
+
+                  <!-- <img src="./img/Imagem" alt="logo AXA"> -->
+                </div>
+              </div>
+
+              <div class="bar"></div>
+              <div class="odd"><div class="bar"></div></div>
+              <div class="bar"></div>
+              <div class="odd"><div class="bar"></div></div>
+              <div class="bar"></div>
+              <div class="odd">
+                <div class="bar"></div>
+              </div>
+              <div class="bar"></div>
+              <div class="odd">
+                <div class="bar"></div>
+              </div>
+              <div class="bar"></div>
+              <div class="odd">
+                <div class="bar"></div>
+              </div>
+            </div>
+
+            <button class="button-left" onclick="scrolling('left', event)"></button>
+            <button class="button-right" onclick="scrolling('right', event)"></button>
+          </div>
         </div>
-       
       </div>
-      
     </section>
 
+    <section id="our-work">
+      <h2 class="title" fade-up>O que Fazemos</h3>
+      <p>A CDF oferece soluções de assistência para atender as necessidades de consumidores e parceiros comerciais,
+        através de uma central de especialistas para suporte remoto e uma rede de técnicos para atendimento presencial.</p>
 
+        <h3>Suporte Tecnólogico Premium.</h3>
+        <div class="carrousel-tecnologie" fade-up>        
+
+          <div class="slides">
+            <div class="slide">
+              <img src="./img/soluciona-1.0d5a280a.jpg">
+              <span >Suporte tecnológico premium</span>
+            </div>
+          </div>
+
+          <div class="slides">
+            <div class="slide">
+              <img src="./img/soluciona-2.dbe4c6da.jpg">
+              <span >Proteção Digital</span>
+            </div>
+          </div>
+
+          <div class="slides">
+            <div class="slide">
+              <img src="./img/soluciona-3.5d99f510.jpg">
+              <span >Casa Conectada</span>
+            </div>
+          </div>
+
+          <div class="slides">
+            <div class="slide">
+              <img src="./img/soluciona-4.56e489ac.jpg">
+              <span >Games</span>
+            </div>
+          </div>
+
+          <div class="slides">
+            <div class="slide">
+              <img src="./img/soluciona-5.701dd1a0.jpg">
+              <span >Home Office</span>
+            </div>
+          </div>
+
+        </div>
+
+        <h3>Serviços residenciais.</h3>
+        <div class="carrousel-residential" fade-up>
+          
+
+          <div class="slides">
+            <div class="slide">
+              <img src="./img/realiza-1.cc64916b.jpg">
+              <span >Instalação de Tv</span>
+            </div>
+
+            <div class="slides">
+              <div class="slide">
+                <img src="./img/realiza-2.4ac98357.jpg">
+                <span >Instalação linha branca</span>
+            </div>
+
+            <div class="slides">
+              <div class="slide">
+                <img src="./img/realiza-3.0855085d.jpg">
+                <span >Instalação Ar Condicionado</span>
+              </div>            
+            </div>
+
+            <div class="slides">
+              <div class="slide">
+                <img src="./img/realiza-4.33afbb2e.jpg">
+                <span >Impermeabilização de estofados</span>
+              </div>            
+            </div>
+
+            <div class="slides">
+              <div class="slide">
+                <img src="./img/realiza-5.601d2cd4.jpg">
+                <span >Higienização de Estofados e colchões</span>
+              </div>            
+            </div>
+
+        </div>
+    </section>
   </body>
 </html>

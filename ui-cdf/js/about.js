@@ -1,38 +1,16 @@
-const targets = document.querySelectorAll("[fade-up]");
+const timeLine = document.querySelector('.bars-draggable')
+const buttonRight = document.querySelector('.button-right')
+const buttonLeft = document.querySelector('.button-left')
 
-function animate() {
-  targets.forEach((element) => {
-    if (
-      document.body.scrollTop + window.innerHeight * 0.75 >
-      element.getBoundingClientRect().top
-    ) {
-      element.classList.add("up");
-    } else {
-      element.classList.remove("up");
-    }
-  });
-}
-
-// teste
-
-window.document.body.addEventListener("scroll", animate);
-
-// let lastKnownScrollPosition = 0;
-// let ticking = false;
-
-// function doSomething(scrollPos) {
+function scrolling(side, event){
   
-// }
-
-//   function(e) {
-//   lastKnownScrollPosition = window.scrollY;
-
-//   if (!ticking) {
-//     window.requestAnimationFrame(function() {
-//       doSomething(lastKnownScrollPosition);
-//       ticking = false;
-//     });
-
-//     ticking = true;
-//   }
-// }
+  if(side === "right"){
+    timeLine.classList.add('scroll')
+    buttonRight.style.opacity = .5;
+    buttonLeft.style.opacity = 1;
+  }else{
+    timeLine.classList.remove('scroll')
+    buttonLeft.style.opacity = .5;
+    buttonRight.style.opacity = 1;
+  }
+}
