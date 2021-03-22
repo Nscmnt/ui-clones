@@ -1,13 +1,14 @@
 #our-work{
   width: 100vw;
-  /* max-width: 1400px; */
-  height: 100vh;
+  height: auto;
 
   margin: 0 auto;
 
   /* padding: 90px 0px; */
 
-  padding: 4rem 30px;
+  padding: 100px 0 0 0px;
+
+  /* margin: 30px 0 0 30px; */
 
   display: flex;
   flex-direction: column;
@@ -15,14 +16,14 @@
   background-color: rgb(240, 237, 237);
 }
 #our-work h2.title{
-  font-size: 2.7rem;
+  font-size: 2.5rem;
 
-  margin: 50px 10px 0px 55px;
+  /* margin: 50px 10px 0px 55px; */
   padding-bottom: 28px;
   text-transform: uppercase;
 
-  align-self: flex-start;
-  visibility: hidden;
+  align-self: initial;
+  /* visibility: hidden; */
 
   position: relative;
 
@@ -44,23 +45,31 @@
 }
 
 #our-work p{
-
+  max-width: 1100px;
   padding: 1rem 2rem;
   font-size: 1.2rem;
 
+  /* opacity: 0; */
+
+  font-family: var(--medium);
   line-height: 19px;
   text-align: center;
 
   margin-bottom: 56px;
+
+  transition: all .5ms ;
 }
 
 #our-work .carrousel-tecnologie, #our-work .carrousel-residential{
   width: 90vw;
-  max-width: 1400px;
+  max-width: 1000px;
+  height: 330px;
 
-  height: 400px;
+  margin: 0 auto;
 
-  margin-bottom: 30px;
+  
+
+  margin: 20px 0 20px 0;
 
   /* background-color: teal; */
 
@@ -71,17 +80,20 @@
 
 
 #our-work  h3{
-  font-size: 1.8rem;
+
+  width: 100vw ;
+  font-size: 1.5rem;
 
   line-height: 30px;
   text-align: start;
   color: #f93822;
-  margin: 20px 0 10px 120px;
+
+  margin: 0px 20px;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 
-  width: 100vw ;
+  
 
   font-family: var(--black);
 
@@ -89,30 +101,36 @@
 }
 
 #our-work .carrousel-tecnologie .slides, #our-work .carrousel-residential .slides{
-  width: max-content;
-  height: 210px;
+  width: 1500px;
+  height: 300px;  
 
-  border-radius: 2px;
+  overflow-y: hidden;
   overflow-x: scroll;
+
   display: flex;
-  /* justify-content: space-evenly; */
-  align-items: stretch;
+  justify-content: center;
+  
+}
+
+#our-work .carrousel-tecnologie .slides::-webkit-scrollbar, #our-work .carrousel-residential .slides::-webkit-scrollbar{
+  display: none;
 }
 
 #our-work .carrousel-tecnologie .slides .slide, #our-work .carrousel-residential .slides .slide{
-  width: 13rem;
-  height: 14rem;
+  width: 250px;
+  min-width: 200px;
+  height: 250px;
+
+  border-radius: 2px;
 
   overflow: hidden;
 
-  margin-right: 20px;
-
-  /* background-color: teal;   */
+  margin: 0px 5px;
 }
 
 #our-work .carrousel-tecnologie .slides .slide img, #our-work .carrousel-residential .slides .slide img{
   width: 100%;
-  height: 80%;
+  height: 200px;
 
   margin: 0;
   padding: 0;
@@ -122,7 +140,7 @@
   height: 20%;
   width: 100%; 
 
-  padding: 5px;
+  padding: 3px;
 
   text-align: center;
   font-family: var(--black);
@@ -134,5 +152,52 @@
   font-size: .8rem;
 
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 640px) and (max-width:960px){
+  #our-work h2.title{
+    align-self: initial;
+  }
+}
+
+@media screen and (min-width: 960px){
+  #our-work h2.title{
+    margin-left: 50px;
+  }
+
+  #our-work p{ 
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: left;
+  
+ 
+  }
+
+  #our-work h3{
+    justify-content: flex-start;
+
+    margin-left: 160px;
+  }
+
+  #our-work .carrousel-tecnologie, #our-work .carrousel-residential{
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  #our-work .carrousel-tecnologie, #our-work .carrousel-residential{
+    justify-content: center;
+  }
+
+  #our-work h2.title{
+    margin-left: 200px;
+  }
+
+  #our-work  h3{
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+
+  
 }
 

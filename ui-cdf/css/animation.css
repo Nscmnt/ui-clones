@@ -72,6 +72,10 @@
   }
 }
 
+.transition{
+  animation: transition 1.5s linear;
+}
+
 .animation-menu-on{
   animation: animation-menu-on 1.2s ease;
 }

@@ -2,6 +2,7 @@ const ups = document.querySelectorAll("[fade-up]");
 const rights = document.querySelectorAll("[fade-right]")
 const downs = document.querySelectorAll("[fade-down]")
 const lefts = document.querySelectorAll("[fade-left]")
+const transitions = document.querySelectorAll('[transition]')
 
 function animateUp() {
   
@@ -61,11 +62,27 @@ function animateLeft() {
 
 }
 
+function transitionOpacity() {
+  
+  transitions.forEach((element) => {
+    if (
+      document.body.scrollTop + window.innerHeight * 0.75 >
+      element.getBoundingClientRect().top
+    ) {
+      element.classList.add("transition");
+    } else {
+      element.classList.remove("transition");
+    }
+  });
+
+}
+
 const init = () => {
   animateUp()
   animateRight()
   animateDown()
   animateLeft()
+  // transitionOpacity()
 }
 init()
 

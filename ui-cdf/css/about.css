@@ -6,7 +6,7 @@
   align-items: center;
 }
 #about .container{
-  width: 100%;
+  width: 90%;
   height: 100%;
 
   display: flex;
@@ -27,15 +27,15 @@
 }
 
 #about .container h2.title{
-  font-size: 2.7rem;
+  font-size: 2.5rem;
 
-  margin: 50px 10px 0px 55px;
+  margin: 50px x 0px 0px 0px;
 
   padding-bottom: 28px;
 
   text-transform: uppercase;
 
-  align-self: flex-start;
+  align-self: initial;
   visibility: hidden;
 
   position: relative;
@@ -59,7 +59,7 @@
 
 .timeline-wrapper{
   width: 90vw;
-  height: 85vh;
+  height: 80vh;
 
   margin-top: 30px;
   position: relative;
@@ -114,7 +114,7 @@
 
 .timeline-bars{
   width: 90vw;
-  height: 100vh;
+  height: 70vh;
   overflow-x: scroll;
   /* overflow-y: hidden; */
   
@@ -383,6 +383,12 @@
   z-index: 11;
 }
 
+@media screen and (min-width: 640px) and (max-width:960px){
+  #about .container h2.title{
+    align-self: center;
+  }
+}
+
 @media screen and (min-width: 960px){
   .bars-draggable.scroll{
     transform: translateX(-1600px);
@@ -392,6 +398,10 @@
 @media screen and (min-width: 1200px){
   .bars-draggable.scroll{
     transform: translateX(-1400px);
+  }
+
+  #about .container h2.title{
+    margin-left: 200px;
   }
 }
 
